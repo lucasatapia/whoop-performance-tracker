@@ -1,0 +1,15 @@
+{
+  "extends": "expo/tsconfig.base",
+  "compilerOptions": {
+    /* ---------------- existing settings ---------------- */
+    "baseUrl": ".",                       // project root
+    "paths": {
+      "@/*": ["./*"]                      // "@/lib/db" → lib/db.ts
+    },
+    "skipLibCheck": true,                 // fast RN compile
+
+    /* -------------- add these two lines --------------- */
+    "esModuleInterop": true,              // allow default CJS imports
+    "allowSyntheticDefaultImports": true  // same for Babel runtime
+  }
+}
